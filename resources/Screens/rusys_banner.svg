@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e2e"/>
+      <stop offset="50%" style="stop-color:#181825"/>
+      <stop offset="100%" style="stop-color:#11111b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#89b4fa"/>
+      <stop offset="50%" style="stop-color:#a6e3a1"/>
+      <stop offset="100%" style="stop-color:#89b4fa"/>
+    </linearGradient>
+    <linearGradient id="usb" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#89b4fa"/>
+      <stop offset="100%" style="stop-color:#74c7ec"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="320" fill="url(#bg)" rx="0"/>
+
+  <!-- Circuit pattern -->
+  <g opacity="0.06" stroke="#89b4fa" stroke-width="1" fill="none">
+    <path d="M0,80 H200 V160 H350"/>
+    <path d="M1280,120 H1100 V60 H900"/>
+    <path d="M0,240 H150 V180 H300 V240 H450"/>
+    <path d="M1280,200 H1050 V260 H850"/>
+    <path d="M400,0 V80 H500 V160"/>
+    <path d="M900,320 V240 H800 V160"/>
+    <circle cx="200" cy="80" r="4" fill="#89b4fa"/>
+    <circle cx="350" cy="160" r="4" fill="#89b4fa"/>
+    <circle cx="1100" cy="60" r="4" fill="#89b4fa"/>
+    <circle cx="900" cy="120" r="4" fill="#89b4fa"/>
+    <circle cx="150" cy="240" r="4" fill="#89b4fa"/>
+    <circle cx="450" cy="240" r="4" fill="#89b4fa"/>
+    <circle cx="1050" cy="260" r="4" fill="#89b4fa"/>
+    <circle cx="500" cy="160" r="4" fill="#89b4fa"/>
+    <circle cx="800" cy="160" r="4" fill="#89b4fa"/>
+  </g>
+
+  <!-- USB Drive Icon -->
+  <g transform="translate(120, 90)" filter="url(#shadow)">
+    <!-- USB Body -->
+    <rect x="0" y="30" width="100" height="80" rx="12" fill="url(#usb)" opacity="0.9"/>
+    <!-- USB Connector -->
+    <rect x="100" y="48" width="30" height="44" rx="4" fill="#cdd6f4" opacity="0.8"/>
+    <rect x="106" y="56" width="6" height="12" rx="2" fill="#45475a"/>
+    <rect x="118" y="56" width="6" height="12" rx="2" fill="#45475a"/>
+    <!-- LED indicator -->
+    <circle cx="50" cy="55" r="8" fill="#a6e3a1" filter="url(#glow)" opacity="0.9"/>
+    <!-- Label on USB -->
+    <text x="50" y="90" text-anchor="middle" font-family="monospace" font-size="11" fill="#1e1e2e" font-weight="bold">RUSYS</text>
+    <!-- Boot arrow -->
+    <g transform="translate(50, 20)" filter="url(#glow)">
+      <polygon points="0,-18 -10,0 -4,0 -4,10 4,10 4,0 10,0" fill="#a6e3a1" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="140" font-family="'Segoe UI', 'Noto Sans', sans-serif" font-size="72" font-weight="800" fill="#cdd6f4" letter-spacing="8" filter="url(#shadow)">
+    RUSYS
+  </text>
+
+  <!-- Tagline -->
+  <text x="300" y="185" font-family="'Segoe UI', 'Noto Sans', sans-serif" font-size="20" fill="#a6adc8" letter-spacing="2">
+    USB Boot Media & Ventoy Multiboot Utility
+  </text>
+
+  <!-- Accent line -->
+  <rect x="300" y="200" width="400" height="3" rx="1.5" fill="url(#accent)" opacity="0.7"/>
+
+  <!-- OS Icons row -->
+  <g transform="translate(300, 230)">
+    <!-- Windows icon (simplified) -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="#89b4fa" opacity="0.8"/>
+      <rect x="16" y="0" width="14" height="14" rx="2" fill="#89b4fa" opacity="0.8"/>
+      <rect x="0" y="16" width="14" height="14" rx="2" fill="#89b4fa" opacity="0.8"/>
+      <rect x="16" y="16" width="14" height="14" rx="2" fill="#89b4fa" opacity="0.8"/>
+      <text x="40" y="22" font-family="'Segoe UI', sans-serif" font-size="14" fill="#a6adc8">Windows</text>
+    </g>
+    <!-- Linux icon (simplified penguin) -->
+    <g transform="translate(140, 0)">
+      <circle cx="12" cy="8" r="8" fill="#a6e3a1" opacity="0.8"/>
+      <ellipse cx="12" cy="24" rx="10" ry="8" fill="#a6e3a1" opacity="0.8"/>
+      <text x="30" y="22" font-family="'Segoe UI', sans-serif" font-size="14" fill="#a6adc8">Linux</text>
+    </g>
+    <!-- BSD icon -->
+    <g transform="translate(260, 0)">
+      <circle cx="12" cy="14" r="12" fill="#f9e2af" opacity="0.8"/>
+      <text x="30" y="22" font-family="'Segoe UI', sans-serif" font-size="14" fill="#a6adc8">BSD</text>
+    </g>
+    <!-- Ventoy icon -->
+    <g transform="translate(370, 0)">
+      <rect x="0" y="2" width="24" height="24" rx="4" fill="#f38ba8" opacity="0.8"/>
+      <text x="5" y="20" font-family="monospace" font-size="12" fill="#1e1e2e" font-weight="bold">V</text>
+      <text x="32" y="22" font-family="'Segoe UI', sans-serif" font-size="14" fill="#a6adc8">Ventoy</text>
+    </g>
+  </g>
+
+  <!-- Version badge -->
+  <g transform="translate(1050, 40)">
+    <rect x="0" y="0" width="160" height="32" rx="16" fill="#313244" stroke="#45475a" stroke-width="1"/>
+    <circle cx="20" cy="16" r="6" fill="#a6e3a1"/>
+    <text x="36" y="21" font-family="'Segoe UI', monospace" font-size="14" fill="#cdd6f4">v26.9.3</text>
+  </g>
+
+  <!-- GPL badge -->
+  <g transform="translate(1050, 82)">
+    <rect x="0" y="0" width="160" height="32" rx="16" fill="#313244" stroke="#45475a" stroke-width="1"/>
+    <text x="16" y="21" font-family="'Segoe UI', monospace" font-size="14" fill="#cdd6f4">GPL-3.0</text>
+  </g>
+
+  <!-- Python badge -->
+  <g transform="translate(1050, 124)">
+    <rect x="0" y="0" width="160" height="32" rx="16" fill="#313244" stroke="#45475a" stroke-width="1"/>
+    <text x="16" y="21" font-family="'Segoe UI', monospace" font-size="14" fill="#f9e2af">Python ≥3.9</text>
+  </g>
+</svg>

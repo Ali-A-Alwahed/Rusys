@@ -1,0 +1,10 @@
+# Rusys runtime dependencies
+# Licensed under GPL-3.0-or-later
+#
+# PySide6 6.12.x requires Python >=3.10,<3.16.
+# requests >=2.33.0 clears CVE-2026-25645; >=2.32.4 clears CVE-2024-47081.
+PySide6>=6.12,<6.13
+requests>=2.34.2
+
+# Build-time only (required to produce dist/ artifacts via Rusys.spec):
+#   pip install pyinstaller>=6.22.3

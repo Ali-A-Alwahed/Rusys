@@ -1,0 +1,10 @@
+# Bundled reference application ("Simple File Downloader") — MIT licensed.
+# NOT a dependency of Rusys: nothing in rusys/ imports or executes this tree.
+# It ships only as a reference asset. Pinned to current, CVE-free releases.
+requests==2.34.2
+customtkinter==6.0.0
+ua-generator==2.1.6
+nuitka==4.3
+python-dotenv==1.2.4
+imageio==2.38.1
+plyer==2.1.0

@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# PyInstaller
+*.spec.bak
+*.manifest.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Rusys runtime
+Rusys_error.log
+*.part
+
+# Download cache
+~/Downloads/Rusys/
+
+# Config
+~/.config/rusys/
+
+# Build artifacts
+*.whl
+*.tar.gz
+
+# mypy / type checking
+.mypy_cache/
+.pytype/
+
+# pytest
+.pytest_cache/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# ruff
+.ruff_cache/

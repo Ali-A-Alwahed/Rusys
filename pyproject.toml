@@ -1,0 +1,62 @@
+# 3rd_Party Extensions - Rusys
+# Copyright (C) 2026 Pro_Tool Project
+# Developer: Ali A Alwahed
+# Licensed under GPL-3.0-or-later
+
+[build-system]
+requires = ["setuptools>=83.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rusys"
+version = "26.10.14"
+description = "Rusys - a Python/PySide6 USB boot-media utility (3rd-party Pro Tool extension, rebuilt from Rufus concepts)"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE.txt", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.10"
+authors = [{ name = "Ali A Alwahed", email = "qdqd37894@gmail.com" }]
+keywords = ["rufus", "usb", "iso", "boot", "flashing", "pro-tool", "ventoy", "multiboot"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: System Administrators",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: System :: Operating System",
+    "Topic :: Utilities",
+]
+
+# requests is pinned to >=2.33.0 to clear CVE-2026-25645 (insecure temp-file reuse
+# in requests.utils.extract_zipped_paths). >=2.32.4 additionally clears
+# CVE-2024-47081 (netrc credential leak on redirect). 2.34.2 is current.
+dependencies = [
+    "PySide6>=6.12,<6.13",
+    "requests>=2.34.2",
+]
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6.22.3"]
+
+[project.urls]
+Homepage = "https://github.com/Ali-A-Alwahed/Rusys"
+Repository = "https://github.com/Ali-A-Alwahed/Rusys"
+Issues = "https://github.com/Ali-A-Alwahed/Rusys/issues"
+Changelog = "https://github.com/Ali-A-Alwahed/Rusys/blob/main/docs/CHANGELOG.md"
+Security = "https://github.com/Ali-A-Alwahed/Rusys/blob/main/SECURITY.md"
+
+[project.scripts]
+rusys = "rusys.cli:main"
+
+[tool.setuptools]
+packages = ["rusys", "rusys.core", "rusys.ui", "rusys.data"]
+
+[tool.setuptools.package-data]
+rusys = ["py.typed"]

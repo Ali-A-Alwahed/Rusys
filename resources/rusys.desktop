@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Rusys
+Comment=USB boot-media and Ventoy multiboot utility
+Exec=Rusys --gui
+Icon=rusys
+Terminal=false
+Type=Application
+Categories=System;Utility;
+Keywords=usb;iso;boot;ventoy;rufus;
